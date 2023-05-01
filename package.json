@@ -1,7 +1,7 @@
 {
-  "name": "trello-clone",
+  "name": "workstream",
   "version": "1.0.0",
-  "description": "workstream",
+  "description": "Streamline your workflow and boost productivity",
   "main": "index.js",
   "engines": {
     "node":"14.x"
