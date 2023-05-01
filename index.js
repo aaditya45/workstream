@@ -24,6 +24,10 @@ server.listen(portNumber, async function () {
   app.use("/api/task/", taskAPI);
 });
 
+app.get('/',(req,res)=>{
+  res.send("workstream");
+})
+
 
 /*
 app.use() is a method in the Express framework used to register middleware functions. 
