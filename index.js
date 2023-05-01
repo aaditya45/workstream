@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const cors = require('cors');
 var http = require("http");
 const server = http.createServer(app);
 const bodyParser = require("body-parser");
@@ -19,6 +20,7 @@ server.listen(portNumber, async function () {
   console.log("Server is running on " + portNumber);
   await dbConnection();
   app.use(bodyParser.json());
+  app.use(cors());
   app.use("/api/user/", userAPI);
   app.use("/api/project/", projectAPI);
   app.use("/api/task/", taskAPI);
