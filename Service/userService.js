@@ -25,14 +25,14 @@ const userService = () => {
         throw new Error("adding user error -->  " + e);
       }
 
-      const token = jwt.sign({ user_id: savedUser._id, email }, process.env.TOKEN_KEY, {
-        expiresIn: "2h",
-      });
+//       const token = jwt.sign({ user_id: savedUser._id, email }, process.env.TOKEN_KEY, {
+//         expiresIn: "2h",
+//       });
       // save user token
       let response = {};
       response.createdProject = user.createdProject;
       response.joinedProject = user.joinedProject;
-      response.token = token;
+     // response.token = token;
       console.log("the user--->",user);
       return { result: "User created ", data: response };
     },
